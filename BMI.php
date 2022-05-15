@@ -70,9 +70,9 @@ if (!empty($_GET)) {
         <form action="./BMI.php" method="get">
 
             <label class="form_items" for="">Height</label>
-            <input class="form_items" type="number" name="height" id="">
+            <input class="form_items" type="number" name="height" id="" required >
             <label class="form_items" for="">Weight</label>
-            <input class="form_items" type="number" name="weight" id="">
+            <input class="form_items" type="number" name="weight" id="" required >
 
             <input class="form_items" type="submit" value="Calculator">
         </form>

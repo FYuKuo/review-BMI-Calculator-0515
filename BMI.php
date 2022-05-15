@@ -1,8 +1,26 @@
 <?php
-$height=$_GET['height'];
-$weight=$_GET['weight'];
+if(!empty($_GET)){
+    $height=$_GET['height'];
+    $weight=$_GET['weight'];
+    
+    $bmi=round($weight / (($height/100)*($height/100)));
 
-$bmi=$weight / (($height/100)*($height/100));
+    $result="";
+
+    if($bmi < 18.5){
+        $result="體重過輕";
+    }elseif($bmi >=18.5 && $bmi < 24){
+        $result="正常範圍";
+    }elseif($bmi >=24 && $bmi < 27){
+        $result="過重";
+    }elseif($bmi >=27 && $bmi < 30){
+        $result="輕度肥胖";
+    }elseif($bmi >=30 && $bmi < 35){
+        $result="中度肥胖";
+    }elseif($bmi >= 35){
+        $result="重度肥胖";
+    }
+}
 
 
 
@@ -24,6 +42,10 @@ $bmi=$weight / (($height/100)*($height/100));
                 <img src="./bmi.png" alt="" width="150px" height="150px">
                 <p>BMI Calculator</p>
             </div>
+<?php
+if(!empty($bmi)){
+?>
+
             <div class="left_result">
                 <div class="result_bmi">
                     <?=$bmi?>
@@ -32,6 +54,9 @@ $bmi=$weight / (($height/100)*($height/100));
                     <?=$result?>
                 </div>
             </div>
+<?php
+}
+?>    
         </div>
         <form action="./BMI.php" method="get">
 

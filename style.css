@@ -2,3 +2,11 @@
     box-sizing: border-box;
     margin: 0;
 }
+
+body.main {
+    background-color: lightpink;
+}
+
+.content{
+    background-color:white ;
+}

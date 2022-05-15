@@ -3,7 +3,7 @@ if(!empty($_GET)){
     $height=$_GET['height'];
     $weight=$_GET['weight'];
     
-    $bmi=round($weight / (($height/100)*($height/100)));
+    $bmi=round($weight / (($height/100)*($height/100)),1);
 
     $result="";
 
@@ -12,7 +12,7 @@ if(!empty($_GET)){
     }elseif($bmi >=18.5 && $bmi < 24){
         $result="正常範圍";
     }elseif($bmi >=24 && $bmi < 27){
-        $result="過重";
+        $result="過重"; 
     }elseif($bmi >=27 && $bmi < 30){
         $result="輕度肥胖";
     }elseif($bmi >=30 && $bmi < 35){
@@ -33,9 +33,9 @@ if(!empty($_GET)){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style01.css">
 </head>
-<body>
+<body class="main">
     <div class="content">
         <div class="left">
             <div class="left_img">
@@ -60,12 +60,12 @@ if(!empty($bmi)){
         </div>
         <form action="./BMI.php" method="get">
 
-            <label for="">Height</label>
-            <input type="number" name="height" id="">
-            <label for="">Weight</label>
-            <input type="number" name="weight" id="">
+            <label class="form_items" for="">Height</label>
+            <input class="form_items" type="number" name="height" id="">
+            <label class="form_items" for="">Weight</label>
+            <input class="form_items" type="number" name="weight" id="">
 
-            <input type="submit" value="Calculator">
+            <input class="form_items" type="submit" value="Calculator">
         </form>
     </div>
 </body>

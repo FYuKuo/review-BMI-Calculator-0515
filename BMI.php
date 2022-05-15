@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <div class="content">
         <div class="left">
             <div class="left_img">
-                <img src="https://cdn0.iconfinder.com/data/icons/health-checkups-3/64/Bmi-measure-scale-weight-512.png" alt="">
+                <img src="./bmi.png" alt="" width="150px" height="150px">
                 <p>BMI Calculator</p>
             </div>
             <div class="left_result">

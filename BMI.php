@@ -1,3 +1,13 @@
+<?php
+$height=$_GET['height'];
+$weight=$_GET['weight'];
+
+$bmi=$weight / (($height/100)*($height/100));
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +25,12 @@
                 <p>BMI Calculator</p>
             </div>
             <div class="left_result">
-
+                <div class="result_bmi">
+                    <?=$bmi?>
+                </div>
+                <div class="result_text">
+                    <?=$result?>
+                </div>
             </div>
         </div>
         <form action="./BMI.php" method="get">

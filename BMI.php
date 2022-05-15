@@ -39,7 +39,7 @@ if(!empty($_GET)){
     <div class="content">
         <div class="left">
             <div class="left_img">
-                <img src="./bmi.png" alt="" width="150px" height="150px">
+                <img src="./bmi.png" alt="" width="100px" height="100px">
                 <p>BMI Calculator</p>
             </div>
 <?php
